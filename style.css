@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "SFPro-Bold";
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #8bb2ff, #eb9aff);
+}
+
+.todo {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.todo h2 {
+  color: #8bb2ff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #eb9aff;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 18px 7px 11px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  color: #555;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 15px;
+  left: 10px;
+}
+
+ul li.checked {
+  color: #5a5a5a;
+}
+
+ul li.checked::before {
+  color: #5a5a5a07;
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 1;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
+
+@font-face {
+  font-family: "SFPro-Bold";
+  src: url("fonts/SFProText-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
